@@ -143,25 +143,7 @@ class DetailScreen extends StatelessWidget {
                         fontSize: 18,
                       ),
                     ),
-                  ),
-                  const SizedBox(height: 10),
-                  const Text(
-                    "category",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 22,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 15, top: 10),
-                    child: Text(
-                      productElement.category,
-                      style: const TextStyle(
-                        fontSize: 18,
-                      ),
-                    ),
-                  ),
-                   const Text(
+               
                     "Price",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
