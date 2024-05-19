@@ -119,12 +119,7 @@ class DetailScreen extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 15, top: 10),
-                    child: Text(
-                      productElement.description,
-                      style: const TextStyle(
-                        fontSize: 18,
-                      ),
+                  
                     ),
                   ),
                   const SizedBox(height: 10),
