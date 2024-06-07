@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class SignIn extends StatefulWidget {
-  const SignIn({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<SignIn> createState() => _SignInState();
+   State<SignUp> createState() => _SignUpState();
 }
 
-class _SignInState extends State<SignIn> {
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       body: Container(
         child: Stack(
           children: [
@@ -38,7 +38,7 @@ class _SignInState extends State<SignIn> {
                 children: [
                   Center(
                       child: Text(
-                    "SignIn",
+                    "SignUp",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 25.0,
@@ -46,7 +46,7 @@ class _SignInState extends State<SignIn> {
                   )),
                   Center(
                       child: Text(
-                    "LogIn to your account",
+                    "Create a new Account",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 20.0,
@@ -64,7 +64,7 @@ class _SignInState extends State<SignIn> {
                       child: Container(
                         padding:
                             EdgeInsets.symmetric(vertical: 30, horizontal: 20),
-                        height: MediaQuery.of(context).size.height /1.7,
+                        height: MediaQuery.of(context).size.height /1.6,
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -72,6 +72,34 @@ class _SignInState extends State<SignIn> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            Text(
+                              "Name",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                border:
+                                    Border.all(width: 1, color: Colors.black38),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    prefixIcon: Icon(
+                                      Icons.mail_outline,
+                                      color: Color(0xFF7f30fe),
+                                    )),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
                             Text(
                               "Email",
                               style: TextStyle(
@@ -127,53 +155,42 @@ class _SignInState extends State<SignIn> {
                               ),
                             ),
                             SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              "Confirm Password",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            SizedBox(
                               height: 10,
                             ),
                             Container(
-                              alignment: Alignment.bottomRight,
-                              child: Text(
-                                "Forgot Password?",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w500),
+                              decoration: BoxDecoration(
+                                border:
+                                    Border.all(width: 1, color: Colors.black38),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    prefixIcon: Icon(
+                                      Icons.password,
+                                      color: Color(0xFF7f30fe),
+                                    )),
+                                obscureText: true,
                               ),
                             ),
                             SizedBox(
-                              height: 50,
+                              height: 10,
                             ),
-                            Center(
-                              child: Container(
-                                width: 130,
-                                child: Material(
-                                  elevation: 5,
-                                  borderRadius: BorderRadius.circular(10),
-                                  child: Container(
-                                    padding: EdgeInsets.all(10),
-                                    decoration: BoxDecoration(
-                                      color: Color(0xFF7f30fe),
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Center(
-                                        child: Text(
-                                      "SignIn",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    )),
-                                  ),
-                                ),
-                              ),
+                          
+                            SizedBox(
+                              height: 30,
                             ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 40,),
-                  Row(
+                             Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
@@ -192,7 +209,40 @@ class _SignInState extends State<SignIn> {
                         ),
                       ),
                     ],
-                  )
+                  ),
+                           
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 30,),
+                   Center(
+                              child: Container(
+                                margin: EdgeInsets.symmetric(horizontal: 20),
+                                width: MediaQuery.of(context).size.width,
+                                child: Material(
+                                  elevation: 5,
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Container(
+                                    padding: EdgeInsets.all(10),
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFF7f30fe),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Center(
+                                        child: Text(
+                                      "SIGN UP",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )),
+                                  ),
+                                ),
+                              ),
+                            ),
                 ],
               ),
             )
