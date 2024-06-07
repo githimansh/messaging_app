@@ -100,6 +100,53 @@ class _HomeState extends State<Home> {
                       )
                     ],
                   ),
+                  SizedBox(height: 30,),
+                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ClipRRect(
+                          borderRadius: BorderRadius.circular(60),
+                          child: Image.asset(
+                            "images/boy.jpg",
+                            height: 70,
+                            width: 70,
+                            fit: BoxFit.cover,
+                          )),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "Sumit Kumar",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 17,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          Text(
+                            "Hii, What is going on?",
+                            style: TextStyle(
+                                color: Colors.black45,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      Text(
+                        "05:31 PM",
+                        style: TextStyle(
+                            color: Colors.black45,
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500),
+                      )
+                    ],
+                  ),
                 ],
               ),
             ),
